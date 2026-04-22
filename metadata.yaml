@@ -1,0 +1,5 @@
+name: astrbot_plugin_imagegen
+desc: GPT-Image-2 生图插件 — $生图 命令 + LLM 工具调用 + AI 提示词优化
+version: v1.0.0
+author: chenluQwQ
+repo: https://github.com/chenluQwQ/astrbot_plugin_imagegen
