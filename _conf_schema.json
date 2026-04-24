@@ -1,44 +1,75 @@
 [
   {
     "key": "api_base",
-    "description": "GPT-Image-2 API 地址（不含 /images/generations）",
+    "description": "生图 API 地址（OpenAI 兼容格式），例如 https://api.openai.com/v1",
     "type": "str",
+    "required": true,
     "default": ""
   },
   {
     "key": "api_key",
-    "description": "API Key（Bearer Token）",
+    "description": "生图 API Key",
     "type": "str",
+    "required": true,
     "default": ""
   },
   {
     "key": "default_size",
-    "description": "默认尺寸：auto / 1024x1024 / 1536x1024 / 1024x1536 / 2048x2048",
+    "description": "默认图片尺寸",
     "type": "str",
-    "default": "1024x1024"
+    "required": false,
+    "default": "1024x1024",
+    "options": ["1024x1024", "1536x1024", "1024x1536", "auto"]
   },
   {
     "key": "default_quality",
-    "description": "默认质量：auto / low / medium / high",
+    "description": "默认图片质量",
     "type": "str",
-    "default": "auto"
-  },
-  {
-    "key": "optimize_prompt",
-    "description": "是否用 LLM 优化用户提示词后再生图（推荐开启）",
-    "type": "bool",
-    "default": true
-  },
-  {
-    "key": "enable_llm_tool",
-    "description": "是否注册为 LLM 工具，让 AI 自行判断何时生图",
-    "type": "bool",
-    "default": true
+    "required": false,
+    "default": "auto",
+    "options": ["low", "medium", "high", "auto"]
   },
   {
     "key": "output_format",
-    "description": "输出格式：png / jpeg / webp",
+    "description": "输出图片格式",
     "type": "str",
-    "default": "png"
+    "required": false,
+    "default": "png",
+    "options": ["png", "webp", "jpeg"]
+  },
+  {
+    "key": "enable_llm_tool",
+    "description": "启用 LLM 工具调用（让 bot 自己判断是否需要生图）",
+    "type": "bool",
+    "required": false,
+    "default": true
+  },
+  {
+    "key": "enable_prompt_optimize",
+    "description": "启用提示词自动优化（自动将用户描述增强为专业英文绘图提示词）",
+    "type": "bool",
+    "required": false,
+    "default": true
+  },
+  {
+    "key": "optimize_api_base",
+    "description": "提示词优化用的 API 地址，留空则复用生图 API 地址",
+    "type": "str",
+    "required": false,
+    "default": ""
+  },
+  {
+    "key": "optimize_api_key",
+    "description": "提示词优化用的 API Key，留空则复用生图 API Key",
+    "type": "str",
+    "required": false,
+    "default": ""
+  },
+  {
+    "key": "optimize_model",
+    "description": "提示词优化使用的模型名称",
+    "type": "str",
+    "required": false,
+    "default": "gpt-4o-mini"
   }
 ]
