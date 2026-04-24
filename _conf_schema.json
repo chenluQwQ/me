@@ -1,33 +1,33 @@
 {
   "api_base": {
     "description": "生图 API 地址（OpenAI 兼容格式），例如 https://api.openai.com/v1",
-    "type": "str",
+    "type": "string",
     "required": true,
     "default": ""
   },
   "api_key": {
     "description": "生图 API Key",
-    "type": "str",
+    "type": "string",
     "required": true,
     "default": ""
   },
   "default_size": {
     "description": "默认图片尺寸",
-    "type": "str",
+    "type": "string",
     "required": false,
     "default": "1024x1024",
     "options": ["1024x1024", "1536x1024", "1024x1536", "auto"]
   },
   "default_quality": {
     "description": "默认图片质量",
-    "type": "str",
+    "type": "string",
     "required": false,
     "default": "auto",
     "options": ["low", "medium", "high", "auto"]
   },
   "output_format": {
     "description": "输出图片格式",
-    "type": "str",
+    "type": "string",
     "required": false,
     "default": "png",
     "options": ["png", "webp", "jpeg"]
@@ -46,19 +46,19 @@
   },
   "optimize_api_base": {
     "description": "提示词优化用的 API 地址，留空则复用生图 API 地址",
-    "type": "str",
+    "type": "string",
     "required": false,
     "default": ""
   },
   "optimize_api_key": {
     "description": "提示词优化用的 API Key，留空则复用生图 API Key",
-    "type": "str",
+    "type": "string",
     "required": false,
     "default": ""
   },
   "optimize_model": {
     "description": "提示词优化使用的模型名称",
-    "type": "str",
+    "type": "string",
     "required": false,
     "default": "gpt-4o-mini"
   }
