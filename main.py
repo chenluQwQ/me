@@ -25,7 +25,7 @@ PROMPT_OPTIMIZE_SYSTEM = """你是一个图像生成提示词专家。用户会�
     "chenluQwQ",
     "GPT-Image-2 生图插件 — $生图 命令 + LLM 工具调用 + AI 提示词优化",
     "1.0.0",
-    "https://github.com/chenluQwQ/astrbot_plugin_imagegen",
+    "https://github.com/chenluQwQ/me",
 )
 class ImageGenPlugin(Star):
 
